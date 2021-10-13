@@ -1,0 +1,11 @@
+C:\Users\Hp\source\repos\Emviewmodel\bin\Debug\Emviewmodel.dll.config
+C:\Users\Hp\source\repos\Emviewmodel\bin\Debug\Emviewmodel.dll
+C:\Users\Hp\source\repos\Emviewmodel\bin\Debug\Emviewmodel.pdb
+C:\Users\Hp\source\repos\Emviewmodel\bin\Debug\EntityFramework.dll
+C:\Users\Hp\source\repos\Emviewmodel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\source\repos\Emviewmodel\bin\Debug\EntityFramework.xml
+C:\Users\Hp\source\repos\Emviewmodel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\source\repos\Emviewmodel\obj\Debug\Emviewmodel.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\Emviewmodel\obj\Debug\Emviewmodel.dll
+C:\Users\Hp\source\repos\Emviewmodel\obj\Debug\Emviewmodel.pdb
+C:\Users\Hp\source\repos\Emviewmodel\obj\Debug\Emviewmodel.csproj.AssemblyReference.cache

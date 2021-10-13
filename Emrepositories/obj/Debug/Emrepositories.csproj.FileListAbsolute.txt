@@ -1,0 +1,14 @@
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\Emrepositories.dll.config
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\Emrepositories.dll
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\Emrepositories.pdb
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\EntityFramework.dll
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\Leave.Domainmodels.dll
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\Leave.Domainmodels.pdb
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\Leave.Domainmodels.dll.config
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\EntityFramework.xml
+C:\Users\Hp\source\repos\Emrepositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\source\repos\Emrepositories\obj\Debug\Emrepositories.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\Emrepositories\obj\Debug\Emrepositories.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\Emrepositories\obj\Debug\Emrepositories.dll
+C:\Users\Hp\source\repos\Emrepositories\obj\Debug\Emrepositories.pdb
