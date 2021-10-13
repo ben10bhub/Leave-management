@@ -1,0 +1,56 @@
+﻿@model List<Emviewmodel.Leaveviewmodel>
+
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Leave Status</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>From Date</th>
+                                <th>To Date</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Fromdate.ToString("dd-MMMM-yyyy")</td>
+                                    <td>@item.Todate.ToString("dd-MMMM-yyyy")</td>
+                                    <td>@item.Note</td>
+
+                                    @if (item.Status == "Pending")
+                                    {
+                                        <td><a href="#" class="btn btn-warning">@item.Status</a></td>
+}
+                                    @if (item.Status == "Accepted")
+                                    {
+                                        <td><a href="#" class="btn btn-success">@item.Status</a></td>
+}
+                                    @if (item.Status == "Rejected")
+                                    {
+                                        <td><a href="#" class="btn btn-danger">@item.Status</a></td>
+}
+
+                                </tr>
+}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

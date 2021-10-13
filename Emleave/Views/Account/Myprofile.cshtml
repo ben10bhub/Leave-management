@@ -1,0 +1,48 @@
+﻿@model Emviewmodel.Employeeviewmodel
+@{ ViewBag.Title = "My Profile"; }
+
+<div class="login-box" styles="width:100px" />
+
+<h4>Edit Profile -@Session["CurrentEmployeeName"]</h4>
+<br />
+<br />
+<br />
+<tr>
+    <td> Employee ID : @Session["CurrentUserID"]</td>
+</tr>
+<br />
+<br />
+<tr>
+    <td> Employee Name : @Session["CurrentEmployeeName"]</td>
+</tr>
+<br />
+<br />
+<tr>
+    <td> Mobile : @Session["CurrentMobile"]</td>
+</tr>
+<br />
+<br />
+<tr>
+    <td> Gender : @Session["CurrentGender"]</td>
+</tr>
+<br />
+<br />
+<tr>
+    <td> Email ID : @Session["CurrentEmployeeEmail"]</td>
+</tr>
+<br />
+<br />
+<tr>
+    <td> RoleId : @Session["CurrentEmployeeRoleId"]</td>
+</tr>
+<br />
+<br />
+<tr>
+    <td> PMId : @Session["CurrentPMId"]</td>
+</tr>
+<br />
+</div>
+
+<script>
+    $("a[href='/account/myprofile']").attr("id", "active");
+</script>
