@@ -18,6 +18,7 @@ namespace Emviewmodel
 
         public string Status { get; set; }
         [Required]
+        public string EMPname { get; set; }
 
 
         public DateTime Fromdate { get; set; }

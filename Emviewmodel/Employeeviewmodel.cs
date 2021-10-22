@@ -28,5 +28,6 @@ namespace Emviewmodel
         public int RoleID { get; set; }
         public bool IsHR { get; set; }
         public bool IsManager { get; set; }
+        public bool IsSpecialPermission { get; set; }
     }
 }

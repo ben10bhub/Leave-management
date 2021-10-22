@@ -15,6 +15,7 @@ namespace Emviewmodel
     {[Required]
     public int EMPID { get; set; }
         [Required]
+        public string EMPname { get; set; }
         public DateTime Fromdate { get; set; }
         [Required]
         public DateTime Todate { get; set; }
