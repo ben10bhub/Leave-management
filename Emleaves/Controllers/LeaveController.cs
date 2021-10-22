@@ -7,7 +7,11 @@ using Emservicelayer;
 using Emviewmodel;
 using System.Net.Mail;
 using System.Net;
+using Employeeleave.Customfilters;
+using System.Net;
+using System.Net.Mail;
 namespace Employeeleave.Controllers
+    
 {
     public class LeaveController : Controller
     {
@@ -20,8 +24,9 @@ namespace Employeeleave.Controllers
         {
             this.leaveService = leaveService;
             this.employeeService = employeeService;
+            
         }
-        // [UserAuthorizationFilter]
+        [EmployeeAuthorizationFilter]
         public ActionResult LeaveRequest()
         {
 
@@ -31,10 +36,11 @@ namespace Employeeleave.Controllers
 
 
         [HttpPost]
-        // [UserAuthorizationFilter]
+        [EmployeeAuthorizationFilter]
         public ActionResult LeaveRequest(Applyleaveviewmodel leaveReq)
         {
             leaveReq.EMPID = Convert.ToInt32(Session["CurrentUserID"]);
+            leaveReq.EMPname = Convert.ToString(Session["CurrentEmployeeName"]);
             leaveReq.Status = "Pending";
 
             this.leaveService.ApplyLeave(leaveReq);
@@ -43,14 +49,14 @@ namespace Employeeleave.Controllers
         }
 
 
-        // [UserAuthorizationFilter]
+        [EmployeeAuthorizationFilter]
         public ActionResult LeaveStatus()
         {
             int EmployeeID = Convert.ToInt32(Session["CurrentUserID"]);
             List<Leaveviewmodel> leaves = this.leaveService.GetLeavesByEMPID(EmployeeID);
             return View(leaves);
         }
-        //  [HRandPMAuthorizationFilter]
+        [HRandPMAuthorizationFilter]
         public ActionResult LeaveUpdation()
         {
             List<Leaveviewmodel> leaves = this.leaveService.GetLeaves();
@@ -58,7 +64,7 @@ namespace Employeeleave.Controllers
         }
 
         [HttpPost]
-        // [HRandPMAuthorizationFilter]
+        [HRandPMAuthorizationFilter]
         public ActionResult LeaveUpdation(Leaveviewmodel updateLeave)
         {
 

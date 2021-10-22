@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using Emservicelayer;
 using Emviewmodel;
+using Employeeleave.Customfilters;
+using System.Net.Mail;
+using System.Net;
 
 
 namespace Employeeleave.Controllers
@@ -17,11 +20,13 @@ namespace Employeeleave.Controllers
         {
             this.rt = rt;
         }
+        [HRAuthorizationFilter]
         public ActionResult Addemployee()
         {
             return View();
         }
         [ValidateAntiForgeryToken]
+        [HRAuthorizationFilter]
         [HttpPost]
         public ActionResult Addemployee( Addemployeeviewmodel rvm)
         {
@@ -77,6 +82,8 @@ namespace Employeeleave.Controllers
                     Session["CurrentEmployeeRoleID"] = evm.RoleID;
                     Session["CurrentIsHR"] = evm.IsHR;
                     Session["CurrentIsManager"] = evm.IsManager;
+                    Session["CurrentEmployeeIsSpecialPermission"] = evm.IsSpecialPermission;
+
 
                     if (evm.IsHR || evm.IsManager)
                     {
@@ -123,12 +130,13 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
 
 
         }
+        [EmployeeAuthorizationFilter]
         public ActionResult Logout()
         {
             Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
-       
+        [EmployeeAuthorizationFilter]
         public ActionResult EditProfile()
         {
             int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
@@ -139,7 +147,7 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        
+        [EmployeeAuthorizationFilter]
         public ActionResult EditProfile(Updateemployeeviewmodel eudvm)
         {
             if (ModelState.IsValid)
@@ -155,6 +163,7 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
                 return View(eudvm);
             }
         }
+        
         public ActionResult Employees()
         {
             List<Employeeviewmodel> employees = this.rt.GetEmployees();
@@ -162,13 +171,14 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
         }
 
         [HttpPatch]
+        
         public ActionResult Employees(Employeeviewmodel evm)
         {
             List<Employeeviewmodel> employees = this.rt.GetEmployees();
             return View(employees);
 
         }
-        
+        [HRAuthorizationFilter]
         public ActionResult ChangeProfile(int id)
         {
 
@@ -180,7 +190,8 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
 
 
         [HttpPost]
-        
+        [HRAuthorizationFilter]
+
         public ActionResult ChangeProfile(Updateemployeeviewmodel EditEmpDetail)
         {
 
@@ -196,7 +207,7 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
             }
         }
 
-        
+        [HRAuthorizationFilter]
         public ActionResult DeleteEmployee(int id)
         {
 
@@ -205,7 +216,7 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
         }
 
 
-
+        [EmployeeAuthorizationFilter]
         public ActionResult Editpassword()
         {
             int uid = Convert.ToInt32(Session["CurrentUserID"]);
@@ -215,6 +226,7 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
         }
         
         [HttpPost]
+        [EmployeeAuthorizationFilter]
         [ValidateAntiForgeryToken]
       
         public ActionResult Editpassword(Updatepasswordviewmodel eupvm)
@@ -231,6 +243,7 @@ int EMPID = Convert.ToInt32(Session["CurrentUserID"]);
                 return View(eupvm);
             }
         }
+        [HRAuthorizationFilter]
         public ActionResult Search(string str, int RoleId)
         {
             if (RoleId == 1)

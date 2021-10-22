@@ -15,6 +15,7 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
+                                <th>Name</th>
                                 <th>From Date</th>
                                 <th>To Date</th>
                                 <th>Description</th>
@@ -27,6 +28,7 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
+                                    <td>@item.EMPname</td>
                                     <td>@item.Fromdate.ToString("dd-MMMM-yyyy")</td>
                                     <td>@item.Todate.ToString("dd-MMMM-yyyy")</td>
                                     <td>@item.Note</td>
