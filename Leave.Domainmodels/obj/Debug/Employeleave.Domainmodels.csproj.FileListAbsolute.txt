@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\Leave.Domainmodels\bin\Debug\Leave.Domainmodels.dll.config
+C:\Users\Hp\source\repos\Leave.Domainmodels\bin\Debug\Leave.Domainmodels.dll
+C:\Users\Hp\source\repos\Leave.Domainmodels\bin\Debug\Leave.Domainmodels.pdb
+C:\Users\Hp\source\repos\Leave.Domainmodels\bin\Debug\EntityFramework.dll
+C:\Users\Hp\source\repos\Leave.Domainmodels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\source\repos\Leave.Domainmodels\bin\Debug\EntityFramework.xml
+C:\Users\Hp\source\repos\Leave.Domainmodels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Employeleave.Domainmodels.Migrations.Leaves.resources
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Employeleave.Domainmodels.csproj.GenerateResource.cache
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Employeleave.Domainmodels.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Leave.Domainmodels.dll
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Leave.Domainmodels.pdb
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Employeleave.Domainmodels.Migrations.mobiledatatypechanged.resources
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Employeleave.Domainmodels.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\Leave.Domainmodels\obj\Debug\Employeleave.Domainmodels.Migrations.lsp.resources
